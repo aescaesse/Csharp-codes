@@ -21,7 +21,7 @@ namespace firsttry
             }
             base.Dispose(disposing);
         }
-
+         
         #region Kod generowany przez Projektanta formularzy systemu Windows
 
         /// <summary>
@@ -207,20 +207,16 @@ namespace firsttry
             // 
             // main1
             // 
-            this.main1.AllEarnings = 0;
-            this.main1.AllSpendings = 0;
-            this.main1.Income = 0;
+            this.main1.AllEarnings = 0D;
+            this.main1.AllSpendings = 0D;
+            this.main1.Income = 0D;
             this.main1.IncomeLabel = "";
             this.main1.Location = new System.Drawing.Point(215, 163);
-            this.main1.Money = 0;
+            this.main1.Money = 0D;
             this.main1.MoneyLabel = "";
             this.main1.Name = "main1";
             this.main1.Size = new System.Drawing.Size(949, 515);
             this.main1.TabIndex = 5;
-            this.main1.button1.Click += new System.EventHandler(this.main1_button1_Click);
-            this.main1.button2.Click += new System.EventHandler(this.main1_button2_Click);
-            this.main1.button3.Click += new System.EventHandler(this.main1_button3_Click);
-
             // 
             // economy1
             // 
@@ -247,6 +243,7 @@ namespace firsttry
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

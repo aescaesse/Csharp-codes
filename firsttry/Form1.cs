@@ -15,13 +15,16 @@ namespace firsttry
     public partial class Form1 : Form
     {
         Point lastClick;
-        Main start = new Main(100, 40,0,0);
+        public Main start = new Main(100, 40, 0, 0);
         public Form1()
         {
             InitializeComponent();
+        }
+        private void Form1_Load(object sender, EventArgs e)
+        {
             SetEverything();
             BottomPanel.Width = button1.Width;
-            main1.BringToFront();
+            main1.Show();
             main1.MoneyLabel = start.Money.ToString();
             main1.IncomeLabel = start.Income.ToString();
             Timer MyTimer = new Timer();
@@ -32,6 +35,8 @@ namespace firsttry
             MyTimer2.Interval = (1);
             MyTimer2.Tick += new EventHandler(MyTimer2_Tick);
             MyTimer2.Start();
+            main1.MoneyLabel = start.Money.ToString();
+            main1.IncomeLabel = start.Income.ToString();
         }
         private void ShowData()
         {
@@ -76,21 +81,19 @@ namespace firsttry
             start.Money += start.Income;
             start.AllEarnings += start.Income;
         }
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            main1.MoneyLabel = start.Money.ToString();
-            main1.IncomeLabel = start.Income.ToString();
-        }
+        
         private void button1_Click(object sender, EventArgs e)
         {
             BottomPanel.Width = button1.Width;
-            main1.BringToFront();
+            economy1.Hide();
+            main1.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             BottomPanel.Width = button2.Width;
-            economy1.BringToFront();
+            main1.Hide();
+            economy1.Show();
         }
         private void exitBtn_Click(object sender, EventArgs e)
         {
@@ -109,26 +112,20 @@ namespace firsttry
                 this.Top += e.Y - lastClick.Y;
             }
         }
-        private void main1_button1_Click(object sender, EventArgs e)
+        public void Change()
         {
             start.Money -= 150;
             start.Income += 2;
-            start.AllSpendings += 150;
-            ShowData();
         }
-        private void main1_button2_Click(object sender, EventArgs e)
+        public void Change2()
         {
             start.Money -= 500;
             start.Income += 5;
-            start.AllSpendings += 500;
-            ShowData();
         }
-        private void main1_button3_Click(object sender, EventArgs e)
+        public void Change3()
         {
             start.Money -= 750;
             start.Income += 10;
-            start.AllSpendings += 750;
-            ShowData();
         }
     }
 }
