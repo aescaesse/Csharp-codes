@@ -38,7 +38,7 @@ namespace firsttry
             main1.MoneyLabel = start.Money.ToString();
             main1.IncomeLabel = start.Income.ToString();
         }
-        private void ShowData()
+        public void ShowData()
         {
             main1.MoneyLabel = start.Money.ToString();
             main1.IncomeLabel = start.Income.ToString();
@@ -103,7 +103,6 @@ namespace firsttry
         {
             lastClick = new Point(e.X, e.Y);
         }
-
         private void panel1_MouseMove(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)

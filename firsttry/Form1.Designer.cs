@@ -207,12 +207,12 @@ namespace firsttry
             // 
             // main1
             // 
-            this.main1.AllEarnings = 0D;
-            this.main1.AllSpendings = 0D;
-            this.main1.Income = 0D;
+            this.main1.AllEarnings = 0;
+            this.main1.AllSpendings = 0;
+            this.main1.Income = 0;
             this.main1.IncomeLabel = "";
             this.main1.Location = new System.Drawing.Point(215, 163);
-            this.main1.Money = 0D;
+            this.main1.Money = 0;
             this.main1.MoneyLabel = "";
             this.main1.Name = "main1";
             this.main1.Size = new System.Drawing.Size(949, 515);

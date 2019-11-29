@@ -12,27 +12,27 @@ namespace firsttry
 {
     public partial class Main : UserControl
     {
-        private double money;
-        private double income;
-        private double allearnings;
-        private double allspendings;
- 
-        public double Money
+        private int money;
+        private int income;
+        private int allearnings;
+        private int allspendings;
+
+        public int Money
         {
             get { return money; }
             set { money = value; }
         }
-        public double Income
+        public int Income
         {
             get { return income; }
             set { income = value; }
         }
-        public double AllSpendings
+        public int AllSpendings
         {
             get { return allspendings; }
             set { allspendings = value; }
         }
-        public double AllEarnings
+        public int AllEarnings
         {
             get { return allearnings; }
             set { allearnings = value; }
@@ -60,8 +60,23 @@ namespace firsttry
         }
         public void button1_Click(object sender, EventArgs e)
         {
-            Form1 formz = new Form1();
-            formz.Change();
+            var forminstance = Application.OpenForms.OfType<Form1>().Single();
+            forminstance.Change();
+            forminstance.ShowData();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var forminstance = Application.OpenForms.OfType<Form1>().Single();
+            forminstance.Change2();
+            forminstance.ShowData();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            var forminstance = Application.OpenForms.OfType<Form1>().Single();
+            forminstance.Change3();
+            forminstance.ShowData();
         }
     }
 }

@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Globalization;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Windows.Forms.DataVisualization.Charting;
@@ -14,8 +15,10 @@ namespace firsttry
 {
     public partial class Graph : UserControl
     {
-        
         Timer timer1 = new Timer();
+        Main main1 = new Main();
+        int a;
+        int b = 1;
         public Graph()
         {
             InitializeComponent();
@@ -24,36 +27,27 @@ namespace firsttry
             timer1.Tick += new EventHandler(timer1_Tick);
             timer1.Start();
         }
-        int a = 1;
-        int b = 2;
-        string[] seriesArray = { "Earnings", "Time" };
+        string[] seriesArray = { "Current Money", "Current Income" };
         private void LoadGraphParams()
         {
-            // Set palette.
             this.chart1.Palette = ChartColorPalette.SeaGreen;
-
-            // Set title.
             this.chart1.Titles.Add("Earnings");
-
-            // Add series
             this.chart1.Series.Clear();
             for (int i = 0; i < seriesArray.Length; i++)
-            {
                 chart1.Series.Add(seriesArray[i]);
-            }
-            // hook up timer event
-            timer1.Tick += timer1_Tick;
-            
+            timer1.Tick += timer1_Tick; 
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
-            a++;
-            b++;
+            
+           /* int.TryParse(main1.IncomeLabel, out b);*/
+            if (int.TryParse(main1.MoneyLabel, out a))
+            {
+                throw new Exception(main1.IncomeLabel);
+            }
             int[] pointsArray = { a, b };
-
             for (int i = 0; i < pointsArray.Length; i++)
             {
-                // Add point.
                 chart1.Series[i].Points.Add(pointsArray[i]);
             }
         }

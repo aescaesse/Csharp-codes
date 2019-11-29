@@ -66,8 +66,9 @@ namespace firsttry
             this.moneyLabel.ForeColor = System.Drawing.Color.Gold;
             this.moneyLabel.Location = new System.Drawing.Point(78, 84);
             this.moneyLabel.Name = "moneyLabel";
-            this.moneyLabel.Size = new System.Drawing.Size(0, 43);
+            this.moneyLabel.Size = new System.Drawing.Size(45, 43);
             this.moneyLabel.TabIndex = 1;
+            this.moneyLabel.Text = "0";
             // 
             // label2
             // 
@@ -105,6 +106,7 @@ namespace firsttry
             this.button2.TabIndex = 5;
             this.button2.Text = "Upgrade for 500 +5 income";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -118,6 +120,7 @@ namespace firsttry
             this.button3.TabIndex = 6;
             this.button3.Text = "Upgrade for 750 +10 income";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // incomeLabel
             // 
@@ -126,8 +129,9 @@ namespace firsttry
             this.incomeLabel.ForeColor = System.Drawing.Color.YellowGreen;
             this.incomeLabel.Location = new System.Drawing.Point(306, 84);
             this.incomeLabel.Name = "incomeLabel";
-            this.incomeLabel.Size = new System.Drawing.Size(0, 43);
+            this.incomeLabel.Size = new System.Drawing.Size(45, 43);
             this.incomeLabel.TabIndex = 7;
+            this.incomeLabel.Text = "0";
             // 
             // label3
             // 
@@ -175,13 +179,13 @@ namespace firsttry
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private Label moneyLabel;
         private Label label2;
         public Button button1;
         public Button button2;
         public Button button3;
-        private Label incomeLabel;
         private Label label3;
         private Label label4;
+        private Label incomeLabel;
+        private Label moneyLabel;
     }
 }
