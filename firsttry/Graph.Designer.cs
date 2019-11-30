@@ -62,6 +62,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
 
+
         }
 
         #endregion

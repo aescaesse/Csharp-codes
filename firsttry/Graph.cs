@@ -15,36 +15,33 @@ namespace firsttry
 {
     public partial class Graph : UserControl
     {
-        Timer timer1 = new Timer();
-        Main main1 = new Main();
-        int a;
-        int b = 1;
+        private int a;
+        private int b;
+        Timer timer3 = new Timer();
         public Graph()
         {
             InitializeComponent();
             LoadGraphParams();
-            timer1.Interval = (1000);
-            timer1.Tick += new EventHandler(timer1_Tick);
-            timer1.Start();
+            timer3.Interval = (1000);
+            timer3.Tick += new EventHandler(timer3_Tick);
+            timer3.Start();
         }
         string[] seriesArray = { "Current Money", "Current Income" };
         private void LoadGraphParams()
         {
+
             this.chart1.Palette = ChartColorPalette.SeaGreen;
             this.chart1.Titles.Add("Earnings");
             this.chart1.Series.Clear();
             for (int i = 0; i < seriesArray.Length; i++)
                 chart1.Series.Add(seriesArray[i]);
-            timer1.Tick += timer1_Tick; 
         }
-        private void timer1_Tick(object sender, EventArgs e)
+
+        private void timer3_Tick(object sender, EventArgs e)
         {
-            
-           /* int.TryParse(main1.IncomeLabel, out b);*/
-            if (int.TryParse(main1.MoneyLabel, out a))
-            {
-                throw new Exception(main1.IncomeLabel);
-            }
+            Form1 f1 = new Form1();
+            a = f1.Mon();
+            b = f1.Inc();
             int[] pointsArray = { a, b };
             for (int i = 0; i < pointsArray.Length; i++)
             {

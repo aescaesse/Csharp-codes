@@ -66,9 +66,8 @@ namespace firsttry
             this.moneyLabel.ForeColor = System.Drawing.Color.Gold;
             this.moneyLabel.Location = new System.Drawing.Point(78, 84);
             this.moneyLabel.Name = "moneyLabel";
-            this.moneyLabel.Size = new System.Drawing.Size(45, 43);
+            this.moneyLabel.Size = new System.Drawing.Size(0, 43);
             this.moneyLabel.TabIndex = 1;
-            this.moneyLabel.Text = "0";
             // 
             // label2
             // 
@@ -129,9 +128,8 @@ namespace firsttry
             this.incomeLabel.ForeColor = System.Drawing.Color.YellowGreen;
             this.incomeLabel.Location = new System.Drawing.Point(306, 84);
             this.incomeLabel.Name = "incomeLabel";
-            this.incomeLabel.Size = new System.Drawing.Size(45, 43);
+            this.incomeLabel.Size = new System.Drawing.Size(0, 43);
             this.incomeLabel.TabIndex = 7;
-            this.incomeLabel.Text = "0";
             // 
             // label3
             // 

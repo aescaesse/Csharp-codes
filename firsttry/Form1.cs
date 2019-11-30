@@ -15,10 +15,19 @@ namespace firsttry
     public partial class Form1 : Form
     {
         Point lastClick;
-        public Main start = new Main(100, 40, 0, 0);
+        public static Main start = new Main(100, 40, 0, 0);
+        
         public Form1()
         {
             InitializeComponent();
+        }
+        public int Mon()
+        {
+            return start.Money;
+        }
+        public int Inc()
+        {
+            return start.Income;
         }
         private void Form1_Load(object sender, EventArgs e)
         {
